@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './form.module.css';
 
-export function Form() {
+export function Vote() {
     const [count, setCount] = useState('');
     const [response, setResponse] = useState('');
 
@@ -12,9 +12,12 @@ export function Form() {
             return;
         }
 
-        const res = await fetch('.netlify/functions/count', {
+        const res = await fetch('/.netlify/functions/vote', {
             method: 'POST',
             body: JSON.stringify({ count }),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
         }).then((res) => res.json());
 
         setResponse(res);
@@ -26,7 +29,7 @@ export function Form() {
             <pre>{JSON.stringify(response, null, 2)}</pre>
             <form onSubmit={handleSubmit} className={styles.form}>
                 <label htmlFor="name" className={styles.label}>
-                    Did you like this workshop?
+                    Please Vote.
                 </label>
                 <input
                     name="count"

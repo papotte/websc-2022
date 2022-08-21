@@ -1,24 +1,24 @@
 :root {
-  --primary: hsl(0 100% 80% / 1);
-  --primary-dark: hsl(0 100% 70% / 1);
-  --text: #222;
+    --primary: hsl(0 100% 80% / 1);
+    --primary-dark: hsl(0 100% 70% / 1);
+    --text: #222;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  color: var(--text);
+    color: var(--text);
 }
 
 body {
-  line-height: 1.4;
+    line-height: 1.4;
 }
 
 header,
 main {
-  margin: 0 auto;
-  max-width: 90vw;
-  width: 54ch;
+    margin: 0 auto;
+    max-width: 90vw;
+    width: 54ch;
 }
