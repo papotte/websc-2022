@@ -12,8 +12,6 @@ const {
 } = process.env;
 
 const supabase = createClient(DATABASE_URL, SUPABASE_SERVICE_API_KEY);
-console.log('DATABASE_URL', DATABASE_URL);
-console.log('supabase', supabase);
 
 export const handler: Handler = async (event) => {
     const { count } = JSON.parse(event.body || '{}');
