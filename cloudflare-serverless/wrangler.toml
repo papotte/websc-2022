@@ -1,0 +1,4 @@
+name = "cloudflare-serverless"
+main = "src/index.ts"
+compatibility_date = "2022-09-01"
+account_id = "0f9059d05a3938881e5b7efed49ae03f"
